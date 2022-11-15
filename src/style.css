@@ -1,0 +1,84 @@
+/* General CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  padding: 10px;
+  border: 1px solid;
+}
+
+.main .left {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.score-content {
+  border: 2px solid black;
+  margin-top: 10px;
+}
+
+.score-item {
+  padding: 2px 5px;
+}
+
+.score-item:nth-child(2n+1) {
+  background-color: #ccc;
+}
+
+.main .left .left-head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .right {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  gap: 20px;
+}
+
+.main .right input {
+  border: 2px solid black;
+  padding: 5px;
+  outline: none;
+}
+
+button {
+  /* width: 60px; */
+  padding: 5px 10px;
+  cursor: pointer;
+  width: fit-content;
+  align-self: flex-end;
+}

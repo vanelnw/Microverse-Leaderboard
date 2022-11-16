@@ -10,6 +10,8 @@ const refreshBtn = document.getElementById('refresh');
 
 leaderboard.renderScores();
 
+document.addEventListener('DOMContentLoaded', leaderboard.refreshScores());
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   leaderboard.addScore(new FormData(form));

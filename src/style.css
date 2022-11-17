@@ -19,9 +19,22 @@ ul {
   list-style-type: none;
 }
 
+body {
+  background: #ecf0f3;
+  display: grid;
+  place-items: center;
+}
+
+.shadow {
+  box-shadow: 1rem 1rem 1rem #d3dae7, -1rem -1rem 1rem #fff;
+}
+
 .app-container {
-  width: 100vw;
-  height: 100vh;
+  width: 800px;
+  margin-top: 8rem;
+  min-height: 430px;
+  cursor: grab;
+  border-radius: 1rem;
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
@@ -29,12 +42,17 @@ ul {
   gap: 50px;
 }
 
+.title {
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  border-radius: 1rem;
+}
+
 .main {
   display: flex;
   justify-content: space-between;
   width: 75%;
   padding: 10px;
-  border: 1px solid;
 }
 
 .main .left {
@@ -44,15 +62,16 @@ ul {
 }
 
 .score-content {
-  border: 2px solid black;
+  padding: 1rem 1rem;
   margin-top: 10px;
+  box-shadow: inset 1rem 1rem 1rem #d3dae7, inset -1rem -1rem 1rem #fff;
 }
 
 .score-item {
   padding: 2px 5px;
 }
 
-.score-item:nth-child(2n+1) {
+.score-item:nth-child(2n + 1) {
   background-color: #ccc;
 }
 
@@ -69,16 +88,24 @@ ul {
   gap: 20px;
 }
 
+.right-title {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
 .main .right input {
-  border: 2px solid black;
+  border: 1px solid #4c5773;
+  border-radius: 1rem;
+  box-shadow: inset 1rem 1rem 1rem #d3dae7, inset -1rem -1rem 1rem #fff;
   padding: 5px;
   outline: none;
 }
 
 button {
-  /* width: 60px; */
   padding: 5px 10px;
   cursor: pointer;
   width: fit-content;
   align-self: flex-end;
+  box-shadow: 4px 4px 2px #000;
 }

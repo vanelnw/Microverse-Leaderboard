@@ -3,12 +3,11 @@ import './style.css';
 
 const leaderboard = new Leaderboard();
 
+const scoreContent = document.querySelector('.score-content');
 const form = document.getElementById('form');
 const nameInput = document.getElementById('name');
 const scoreInput = document.getElementById('score');
 const refreshBtn = document.getElementById('refresh');
-
-leaderboard.renderScores();
 
 document.addEventListener('DOMContentLoaded', leaderboard.refreshScores());
 
@@ -20,5 +19,6 @@ form.addEventListener('submit', (event) => {
 });
 
 refreshBtn.addEventListener('click', () => {
+  scoreContent.innerHTML = '';
   leaderboard.refreshScores();
 });

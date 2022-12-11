@@ -1,4 +1,4 @@
-# Microverse-ToDoList
+# Microverse-Leaderboard
 
 HTML + JS project to implement an storage for a daily's tasks to do.
 
@@ -15,7 +15,7 @@ Each Tasks have a button to remove them from the List and a checkBox to mark it 
 
 ## Live Demo
 
-[Demo](https://vanelnw.github.io/Microverse-To-Do-List/dist/)
+[Live Demo Link](https://vanelnw.github.io/Microverse-Leaderboard/dist/)
 
 ## Getting Started
 
@@ -23,8 +23,8 @@ Each Tasks have a button to remove them from the List and a checkBox to mark it 
 
 - Create a folder into your storage device.
 - Open a command line Terminal and go to the new folder.
-- Execute: 'git clone https://github.com/vanelnw/Microverse-To-Do-List.git'
-- Open terminal and dir to Microverse-To-Do-List.git
+- Execute: 'git clone https://github.com/vanelnw/Microverse-Leaderboard.git'
+- Open terminal and dir to Microverse-Leaderboard
 - Run npm install
 - Run npm run build
 - Run npm start then visit http://localhost:8080 in your browser.

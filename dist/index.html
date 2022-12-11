@@ -7,19 +7,19 @@
     <title>Leaderboard</title>
   <script defer src="main.js"></script></head>
   <body>
-    <div class="app-container">
-      <h1>Leaderboard</h1>
-      <div class="main">
+    <div class="app-container shadow">
+      <div class="title shadow"><h1>Leaderboard</h1></div>
+      <div class="main shadow">
         <div class="left">
           <div class="left-head">
-            <p>Recent scores</p>
+            <h2>Recent scores</h2>
             <button id="refresh">Refresh</button>
           </div>
           <ul class="score-content"></ul>
         </div>
         <form  id="form" class="right">
-          <p class="title">Add your score</p>
-          <input type="text" id="name" name="name" placeholder="your name"  />
+         <div class="right-title shadow"><h2>Add your score</h2></div> 
+          <input  type="text" id="name" name="name" placeholder="your name"  />
           <input type="number" id="score"  name="score" placeholder="your score" />
           <button type="submit">Submit</button>
         </form>

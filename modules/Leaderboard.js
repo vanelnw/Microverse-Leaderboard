@@ -1,10 +1,5 @@
 import Score from './score.js';
 
-function displayScore(score) {
-  const scoreContent = document.querySelector('.score-content');
-  scoreContent.innerHTML += `<li class="score-item"> ${score.user} : ${score.score}</li>`;
-}
-
 export default class Leaderboard {
   constructor() {
     this.Scores = [];
@@ -28,14 +23,16 @@ export default class Leaderboard {
     )
       .then((response) => response.json())
       .then(() => {
-        displayScore(score);
+        document.querySelector('.score-content').innerHTML += `<li class="score-item"> ${score.user} : ${score.score}</li>`;
         this.Scores.push(score);
       });
   };
 
   renderScores = () => {
     this.Scores.forEach((score) => {
-      displayScore(score);
+      document.querySelector(
+        '.score-content',
+      ).innerHTML += `<li class="score-item"> ${score.user} : ${score.score}</li>`;
     });
   };
 
@@ -45,8 +42,7 @@ export default class Leaderboard {
     ).then((response) => response.json());
 
     this.Scores = response.result;
-    const scoreContent = document.querySelector('.score-content');
-    scoreContent.innerHTML = '';
+    document.querySelector('.score-content').innerHTML = '';
     this.renderScores();
-  };;
+  };
 }

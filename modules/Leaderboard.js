@@ -7,7 +7,6 @@ export default class Leaderboard {
 
   addScore = async (data) => {
     const score = new Score(data.get('name'), data.get('score'));
-
     await fetch(
       `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${process.env.GAME_ID}/scores`,
       {
@@ -20,29 +19,29 @@ export default class Leaderboard {
           'Content-type': 'application/json; charset=UTF-8',
         },
       },
-    )
-      .then((response) => response.json())
-      .then(() => {
-        document.querySelector('.score-content').innerHTML += `<li class="score-item"> ${score.user} : ${score.score}</li>`;
-        this.Scores.push(score);
-      });
+    );
+
+    this.scores.push(score);
+    this.renderScore(score);
   };
 
-  renderScores = () => {
-    this.Scores.forEach((score) => {
-      document.querySelector(
-        '.score-content',
-      ).innerHTML += `<li class="score-item"> ${score.user} : ${score.score}</li>`;
-    });
-  };
+  renderScore = (score) => {
+    const scoreList = document.querySelector('.score-list');
+    scoreList.innerHTML += `<li class="score-item"> ${score.user} : ${score.score}</li>`;
+  }
 
   refreshScores = async () => {
     const response = await fetch(
       `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${process.env.GAME_ID}/scores`,
-    ).then((response) => response.json());
+    );
 
-    this.Scores = response.result;
-    document.querySelector('.score-content').innerHTML = '';
-    this.renderScores();
+    const result = await response.json();
+    this.scores = result.result;
+
+    const scoreList = document.querySelector('.score-list');
+    scoreList.innerHTML = '';
+    this.scores.forEach((score) => {
+      this.renderScore(score);
+    });
   };
 }

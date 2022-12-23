@@ -1,19 +1,26 @@
-/* General CSS */
-* {
-  padding: 0;
+html,
+body,
+ul,
+li,
+h2,
+a,
+button {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+* {
   box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
-  overflow-x: hidden;
-}
-
 body {
+  font-size: 16px;
+  font-family: sans-serif;
   background: #ecf0f3;
-  display: grid;
-  place-items: center;
 }
 
 a {
@@ -26,20 +33,22 @@ ul {
 }
 
 button {
-  padding: 5px 10px;
   cursor: pointer;
+  display: inline-block;
   width: fit-content;
+  padding: 5px 10px;
   align-self: flex-end;
   box-shadow: 4px 4px 2px #000;
 }
 
-.shadow {
-  box-shadow: 1rem 1rem 1rem #d3dae7, -1rem -1rem 1rem #fff;
+body {
+  display: grid;
+  place-items: center;
 }
 
 .app-container {
   width: 800px;
-  margin-top: 8rem;
+  margin-top: 6rem;
   min-height: 430px;
   cursor: grab;
   border-radius: 1rem;
@@ -48,6 +57,10 @@ button {
   flex-direction: column;
   align-items: center;
   gap: 50px;
+}
+
+.shadow {
+  box-shadow: 1rem 1rem 1rem #d3dae7, -1rem -1rem 1rem #fff;
 }
 
 .title {
@@ -62,13 +75,13 @@ button {
   padding: 20px;
 }
 
-.main .left {
+.recent-scores {
   width: 45%;
   display: flex;
   flex-direction: column;
 }
 
-.score-content {
+.score-list {
   padding: 1rem 1rem;
   margin-top: 10px;
   box-shadow: inset 1rem 1rem 1rem #d3dae7, inset -1rem -1rem 1rem #fff;
@@ -82,26 +95,27 @@ button {
   background-color: #ccc;
 }
 
-.main .left .left-head {
+.recent-scores .header {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.main .right {
+.add-score {
   display: flex;
   flex-direction: column;
   width: 45%;
   gap: 20px;
 }
 
-.right-title {
+.add-score-title {
   margin-top: 1rem;
   padding: 1rem 2rem;
   border-radius: 1rem;
 }
 
-.main .right input {
+.add-score input {
   border: 1px solid #4c5773;
   border-radius: 1rem;
   box-shadow: inset 1rem 1rem 1rem #d3dae7, inset -1rem -1rem 1rem #fff;

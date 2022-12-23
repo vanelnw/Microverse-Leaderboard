@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard</title>
+  </head>
+  <body>
+    <div class="app-container shadow">
+      <div class="title shadow"><h1>Leaderboard</h1></div>
+      <div class="main shadow">
+        <div class="recent-scores">
+          <div class="header">
+            <h2>Recent scores</h2>
+            <button
+              id="refresh-button"
+              aria-label="Refresh the recent scores list"
+            >
+              Refresh
+            </button>
+          </div>
+          <ul class="score-list"></ul>
+        </div>
+        <form id="add-score-form" class="add-score">
+          <div class="add-score-title shadow"><h2>Add your score</h2></div>
+          <input
+            type="text"
+            id="name-input"
+            name="name"
+            placeholder="Your name"
+          />
+          <input
+            type="number"
+            id="score-input"
+            name="score"
+            placeholder="Your score"
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

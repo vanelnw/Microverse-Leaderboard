@@ -9,7 +9,6 @@ button {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -21,6 +20,8 @@ body {
   font-size: 16px;
   font-family: sans-serif;
   background: #ecf0f3;
+  display: grid;
+  place-items: center;
 }
 
 a {
@@ -39,11 +40,6 @@ button {
   padding: 5px 10px;
   align-self: flex-end;
   box-shadow: 4px 4px 2px #000;
-}
-
-body {
-  display: grid;
-  place-items: center;
 }
 
 .app-container {
